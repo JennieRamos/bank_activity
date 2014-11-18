@@ -5,3 +5,5 @@ class Bank(object):
     self.accounts[account.account_number] = account.balance
   def get_account_balance(self, account_number):
     return self.accounts.get(account_number)
+  def account_exist(self, account_number):
+    self.accounts.get(account_number) != 'None'
