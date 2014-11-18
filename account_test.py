@@ -10,10 +10,12 @@ class TestAccount(unittest.TestCase):
     account = Account("001", 50)
     self.assertEqual(account.account_number, "001")
     self.assertEqual(account.balance, 50)
-  
-def withdraw_from_account(self):
-  withdraw = withdraw()
  
+  def test_withdraw(self):
+    account = account("001",20)
+    self.assertEqual(account.account_number, "001")
+    self.assertEqual(account.balance, 50)
+    self.assertEqual(account.withdraw, 30)
 
-if  __name__== '__main__':
+if __name__ == '__main__':
   unittest.main()
