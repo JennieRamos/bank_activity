@@ -1,12 +1,13 @@
 import unittest
-from account import Account
-from bank import Bank
+from bank.account import Account
+from bank.bank import Bank
 
 class BankTest(unittest.TestCase):
   def test_bank_is_initially_empty(self):
     bank = Bank()
     self.assertEqual({}, bank.accounts) 
     self.assertEqual(len(bank.accounts), 0)
+
   def test_add_account(self):
     bank = Bank()
     account_1 = Account(001, 50)
@@ -14,11 +15,13 @@ class BankTest(unittest.TestCase):
     bank.add_account(account_1)
     bank.add_account(account_2)
     self.assertEqual(len(bank.accounts), 2)
+
   def test_get_account_balance(self):
     bank = Bank()
     account_1 = Account(001, 50)
     bank.add_account(account_1)
     self.assertEqual(bank.get_account_balance(001), 50)
+    
   def test_existing_account(self):
     bank = Bank()
     account_1 = Account(001, 50)
