@@ -1,7 +1,9 @@
 from flask import Flask , render_template, request
 from bank.bank import Bank
+from bank.account import Account
 app = Flask(__name__)
 BANK = Bank()
+import cProfile
 
 @app.route('/')
 def hello_world():
@@ -13,4 +15,6 @@ def hello_world():
 
     
 if __name__ == '__main__':
-    app.run(debug=True)
+    account = Account('1111', 50)
+    BANK.add_account(account)
+    cProfile.run('app.run(debug=True)')
