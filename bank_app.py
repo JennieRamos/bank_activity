@@ -1,13 +1,13 @@
 """This is docstring"""
 
 from flask import Flask, render_template, request
-from bank_activity.bank.bank import Bank
-from bank_activity.bank.account import Account
-APP = Flask(__name__)
+from bank.bank import Bank
+from bank.account import Account
+app = Flask(__name__)
 BANK = Bank()
 import cProfile
 
-@APP.route('/')
+@app.route('/')
 def hello_world():
     """This is docstring"""
     account_number = request.args.get('account_number')
@@ -17,4 +17,4 @@ def hello_world():
 if __name__ == '__main__':
     #account = Account('1111', 50)
     BANK.add_account(Account('1111', 50))
-    cProfile.run('APP.run(debug=True)', sort='time')
+    cProfile.run('app.run(debug=True)', sort='time')
