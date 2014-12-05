@@ -1,7 +1,7 @@
 import unittest
 from bank.account import Account
 from bank.account import Withdraws
-from bank.account import Check_balance
+#from bank.account import Check_balance
 
 class TestAccount(unittest.TestCase):
   def test_account_object_can_be_created(self):
