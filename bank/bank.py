@@ -1,3 +1,4 @@
+"""Bank"""
 class Bank(object):
     """ bank """
     def __init__(self):
