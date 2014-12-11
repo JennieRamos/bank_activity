@@ -6,5 +6,5 @@ class Account(object):
 
 class Withdraws(object):
     """withdraw"""
-    def __init__( self, acount_number, balance, withdraw):
+    def __init__(self, acount_number, balance, withdraw):
         self.balance = balance-withdraw
