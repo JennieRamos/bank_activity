@@ -4,7 +4,7 @@ msg-template="{msg_id}({symbol}) - {obj} Line #{line}: {msg}"
 [MESSAGES CONTROL]
 # Use this to remove uninteresting (or currently less important) warnings and errors.
 disable=C0304
-
+disable =R0903
 [DESIGN]
 # Maximum number of arguments for function / method max-args=5
 # Argument names that match this expression
